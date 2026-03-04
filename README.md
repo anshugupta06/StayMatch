@@ -236,20 +236,29 @@ backend/
 StayMatch is organized with a clean separation between backend services and frontend interface.
 
 FossHack/
-│
+
 ├── backend
-│   ├── models
-│   │   └── User.js
-│   ├── controllers
-│   ├── routes
-│   ├── config
-│   └── server.js
-│
+
+    ├── models
+
+        └── User.js
+
+    ├── controllers
+
+    ├── routes
+
+    ├── config
+
+    └── server.js
+
 ├── index.html
+
 ├── script.js
+
 ├── style.css
-│
+
 ├── README.md
+
 └── LICENSE
 
 ## Future Improvements
