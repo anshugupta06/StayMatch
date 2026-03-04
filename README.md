@@ -252,3 +252,11 @@ FossHack/
 ├── README.md
 └── LICENSE
 
+## Future Improvements
+
+• Machine learning based compatibility prediction  
+• Mobile application for roommate matching  
+• Real-time chat between potential roommates  
+• Smart conflict prediction using behavioral patterns  
+• Integration with university housing systems  
+
