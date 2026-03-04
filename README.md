@@ -230,3 +230,25 @@ backend/
 ├── config        → Configuration files such as database connection setup
 
 └── server.js     → Application entry point that initializes the Express server
+
+## Repository Structure
+
+StayMatch is organized with a clean separation between backend services and frontend interface.
+
+FossHack/
+│
+├── backend
+│   ├── models
+│   │   └── User.js
+│   ├── controllers
+│   ├── routes
+│   ├── config
+│   └── server.js
+│
+├── index.html
+├── script.js
+├── style.css
+│
+├── README.md
+└── LICENSE
+
