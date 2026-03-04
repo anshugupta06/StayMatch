@@ -214,3 +214,19 @@ This layer functions independently and can be reused as a framework.
 🔬 Technical Innovation
 
 StayMatch introduces a configurable compatibility engine where scoring weights can be dynamically adjusted without modifying core logic. The system separates compatibility evaluation from application logic, enabling reuse as a standalone framework. Additionally, rule-based conflict risk modeling ensures interpretability and transparency in match evaluation.
+
+## Backend Architecture
+
+The backend of StayMatch follows a modular **Node.js + Express** architecture to ensure scalability, maintainability, and clear separation of concerns.
+
+backend/
+
+├── models        → Database schemas (User preferences, accommodation data)
+
+├── controllers   → Business logic for handling compatibility evaluation and API responses
+
+├── routes        → API endpoints for user interaction and data operations
+
+├── config        → Configuration files such as database connection setup
+
+└── server.js     → Application entry point that initializes the Express server
