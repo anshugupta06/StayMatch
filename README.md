@@ -20,6 +20,7 @@ This gap results in:
 
 Therefore, there is a need for a structured, modular, and configurable compatibility evaluation system that can assess lifestyle alignment, predict conflict risk, and assist institutions or co-living providers in making informed roommate allocations.
 
+
 ✨ Current Solution
 
 At present, individuals searching for shared accommodation primarily rely on:
@@ -62,6 +63,7 @@ As a result, compatibility assessment is informal, subjective, and reactive — 
 
 This highlights the absence of a modular, open-source compatibility framework designed specifically for shared living environments.
 
+
 ✨ Project Goals and Milestones
 
 🎯 General Goals
@@ -77,6 +79,10 @@ This highlights the absence of a modular, open-source compatibility framework de
 • To provide a digital roommate agreement generation system for structured shared-living commitments.
 
 • To ensure clean documentation, modular codebase, and contribution-friendly open-source structure.
+
+• To provide intelligent roommate recommendations based on compatibility scores.
+
+• To offer visual analytics such as radar charts for lifestyle comparison.
 
 📌 Milestones
 
@@ -108,6 +114,7 @@ Phase 4 – Refinement & Open Source Readiness
 • Contribution guide and setup instructions
 • Testing and performance validation
 • Final demonstration and deployment
+
 
 ✨ Project Approach
 
@@ -173,6 +180,32 @@ This layer functions independently and can be reused as a framework.
 • Contribution guide
 • Modular folder organization
 
+
+✨ System Features
+
+The StayMatch platform provides several features designed to improve compatibility-based roommate allocation and reduce shared-living conflicts.
+
+1. Lifestyle Compatibility Matching – Evaluates compatibility between users based on lifestyle preferences such as sleep schedule, cleanliness, study habits, and noise tolerance.
+
+2. Configurable Compatibility Engine – Uses a JSON-based configuration system that allows administrators to modify scoring weights without altering the core algorithm.
+
+3. Conflict Risk Prediction – Identifies potential conflicts between roommates using rule-based mismatch detection.
+
+4. Match Explanation System – Provides transparent explanations showing why two users are considered compatible or incompatible.
+
+5. Digital Roommate Agreement Generator – Generates structured agreements that define shared living rules and expectations.
+
+6. Compatibility Visualization – Displays compatibility comparisons using radar charts and visual analytics.
+
+7. Guest Mode Access – Allows users to explore the platform without creating an account.
+
+8. Smart Match Recommendation System – Ranks potential roommates based on compatibility scores and suggests the most suitable matches.
+
+9. Lifestyle Compatibility Radar Chart – Provides graphical comparison of lifestyle parameters between users.
+
+10. Compatibility Feedback System – Allows users to provide feedback on the accuracy of compatibility predictions to improve future recommendations.
+
+
 ✨ Project Outcomes
 
 • A fully functional Open-Source Lifestyle Compatibility Engine.
@@ -185,7 +218,11 @@ This layer functions independently and can be reused as a framework.
 
 • Digital roommate agreement generation to formalize shared living expectations.
 
-• Visual compatibility analytics for better decision-making.
+• Visual compatibility analytics using radar charts for lifestyle comparison.
+
+• Smart recommendation of potential roommates based on compatibility ranking.
+
+• Feedback mechanism to improve the compatibility evaluation process.
 
 • Clean modular backend architecture suitable for further extension.
 
@@ -206,6 +243,7 @@ This layer functions independently and can be reused as a framework.
 
 • Risk classification is rule-based in the current version (no ML dependency).
 
+
 ✨ References
 
 • Elmasri & Navathe – Fundamentals of Database Systems
@@ -221,6 +259,7 @@ This layer functions independently and can be reused as a framework.
 • React Official Documentation
 
 • Research literature on social compatibility modeling and roommate matching frameworks
+
 
 ✨ Technology Stack
 
@@ -298,9 +337,11 @@ Git & GitHub – Version control and open-source collaboration.
 
 Postman – API testing and debugging.
 
+
 🔬 Technical Innovation
 
-StayMatch introduces a configurable compatibility engine where scoring weights can be dynamically adjusted without modifying core logic. The system separates compatibility evaluation from application logic, enabling reuse as a standalone framework. Additionally, rule-based conflict risk modeling ensures interpretability and transparency in match evaluation.
+StayMatch introduces a configurable compatibility engine where scoring weights can be dynamically adjusted without modifying core logic. The system separates compatibility evaluation from application logic, enabling reuse as a standalone framework. Additionally, the system incorporates rule-based conflict risk modeling, visual compatibility analytics using radar charts, and a recommendation system that ranks potential roommate matches based on lifestyle similarity.
+
 
 ## Backend Architecture
 
