@@ -79,6 +79,7 @@ This highlights the absence of a modular, open-source compatibility framework de
 • To ensure clean documentation, modular codebase, and contribution-friendly open-source structure.
 
 📌 Milestones
+
 Phase 1 – Core Architecture
 
 • Requirement analysis and compatibility parameter definition
@@ -196,20 +197,106 @@ This layer functions independently and can be reused as a framework.
 ✨ Assumptions
 
 • Users provide reasonably accurate preference information.
+
 • Lifestyle parameters are measurable and comparable.
+
 • Institutions may customize weight configuration as per policy.
+
 • The system initially handles a moderate user base.
+
 • Risk classification is rule-based in the current version (no ML dependency).
 
 ✨ References
 
 • Elmasri & Navathe – Fundamentals of Database Systems
+
 • Korth & Silberschatz – Database System Concepts
+
 • MongoDB Official Documentation
+
 • Node.js Documentation
+
 • Express.js Guide
+
 • React Official Documentation
+
 • Research literature on social compatibility modeling and roommate matching frameworks
+
+✨ Technology Stack
+
+The StayMatch system is implemented using a modern full-stack web development architecture that supports scalability, modularity, and open-source extensibility.
+
+1. Frontend Technologies
+
+The frontend of the system is responsible for providing an interactive interface where users can enter their lifestyle preferences, view compatibility matches, and analyze compatibility metrics.
+
+HTML5 – Used for structuring the web pages and forms for user data input.
+
+CSS3 – Used for styling and designing responsive user interfaces.
+
+JavaScript (ES6) – Enables dynamic interaction between the user interface and backend APIs.
+
+React.js – A component-based JavaScript library used to build dynamic and scalable user interfaces.
+
+Chart.js – Used to visualize compatibility comparisons through radar charts and analytical dashboards.
+
+2. Backend Technologies
+
+The backend handles business logic, compatibility scoring, conflict prediction, API management, and agreement generation.
+
+Node.js – Provides a runtime environment for executing server-side JavaScript.
+
+Express.js – A lightweight web framework used to build RESTful APIs and manage server routing.
+
+3. Database
+
+The system stores user preferences, accommodation data, compatibility scores, and roommate agreements.
+
+MongoDB – A NoSQL document-oriented database used for flexible and scalable data storage.
+
+Mongoose – An Object Data Modeling (ODM) library used to manage MongoDB schemas and database interactions.
+
+4. Compatibility Engine
+
+The core innovation of the system is implemented through a configurable compatibility evaluation framework.
+
+JavaScript-based compatibility scoring algorithm
+
+JSON-based weight configuration system that allows institutions to adjust the importance of lifestyle parameters without modifying the core code.
+
+5. Authentication and Security
+
+User authentication and secure access to system APIs are handled using:
+
+JSON Web Tokens (JWT) – For secure authentication and session management.
+
+bcrypt.js – For password hashing and secure credential storage.
+
+6. Agreement Generation
+
+To formalize shared living rules between matched roommates:
+
+PDFKit / HTML-PDF – Used to dynamically generate digital roommate agreements in PDF format.
+
+7. Deployment and Hosting
+
+The system can be deployed using cloud-based platforms for scalability and accessibility.
+
+MongoDB Atlas – Cloud-hosted database service.
+
+Render / Railway – Backend server hosting.
+
+Vercel / Netlify – Frontend deployment.
+
+8. Development Tools
+
+The following tools are used during development and collaboration:
+
+Visual Studio Code – Primary development environment.
+
+Git & GitHub – Version control and open-source collaboration.
+
+Postman – API testing and debugging.
 
 🔬 Technical Innovation
 
