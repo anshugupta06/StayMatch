@@ -397,3 +397,38 @@ FossHack/
 • Smart conflict prediction using behavioral patterns  
 • Integration with university housing systems  
 
+
+
+## 🚧 Development Progress
+
+### 1 March 2026
+- Hackathon project initialized
+- GitHub repository created and shared with team members
+- Initial README documentation added
+- MIT License added to the repository
+
+### 2 March 2026
+- Basic project structure created
+- Frontend base files added (`index.html`, `script.js`, `style.css`)
+- Repository organization improved
+
+### 3 March 2026
+- Backend folder created
+- Node.js backend initialization started
+- Basic server setup for backend
+
+### 4 March 2026
+- Express server configuration completed
+- Backend project structure organized
+
+### 5 March 2026
+- Utility folder created for reusable logic
+- Compatibility engine logic implemented in `utils`
+
+### 6 March 2026
+- Sample preference data added for testing compatibility scoring
+- Initial testing of compatibility calculation
+
+### 7 March 2026
+- Minor fixes and repository updates
+- Documentation improvements and progress updates
