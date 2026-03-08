@@ -248,9 +248,7 @@ backend/
 - **server.js** – Main application entry point  
 
 ---
-
 # Repository Structure
-
 FossHack/
 
 ├── backend
@@ -265,7 +263,6 @@ FossHack/
 ├── style.css
 ├── README.md
 └── LICENSE
-
 
 ---
 
