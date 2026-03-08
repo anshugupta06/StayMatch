@@ -1,434 +1,342 @@
-StayMatch -  An Open-Source Lifestyle Compatibility Engine for Shared Living
+# StayMatch – Lifestyle Compatibility Engine for Shared Living
 
-✨ Problem Statement
+StayMatch is an **open-source lifestyle compatibility engine** designed to help students and working professionals find compatible roommates before sharing accommodation.
 
-In urban environments, students and working professionals frequently relocate for education and employment. While accommodation discovery has become easier through digital platforms, roommate allocation remains largely unstructured and compatibility-blind. Most existing systems prioritize room availability over lifestyle alignment, resulting in frequent interpersonal conflicts.
+The system evaluates lifestyle preferences and predicts **compatibility scores and potential conflict risks**, enabling smarter roommate matching.
 
-Differences in sleep schedules, cleanliness standards, study habits, noise tolerance, smoking preferences, financial expectations, and social behavior often lead to avoidable disputes in shared living spaces. Current methods such as broker-based allocation, social media groups, or random hostel assignments lack any structured compatibility evaluation mechanism.
+---
 
-There is no open-source, configurable framework that evaluates lifestyle compatibility and predicts potential conflict risk before individuals share a room.
+## Table of Contents
 
-This gap results in:
+- [Problem Statement](#problem-statement)
+- [Current Solution](#current-solution)
+- [Project Goals and Milestones](#project-goals-and-milestones)
+- [Project Approach](#project-approach)
+- [System Features](#system-features)
+- [Technology Stack](#technology-stack)
+- [Backend Architecture](#backend-architecture)
+- [Repository Structure](#repository-structure)
+- [Project Outcomes](#project-outcomes)
+- [Future Improvements](#future-improvements)
+- [Assumptions](#assumptions)
+- [References](#references)
+- [Development Progress](#development-progress)
 
-- Increased roommate conflicts
+---
 
-- Reduced productivity and mental well-being
+# Problem Statement
 
-- Financial misunderstandings
+In urban environments, students and working professionals frequently relocate for education and employment. While accommodation discovery has become easier through digital platforms, **roommate allocation remains largely compatibility-blind**.
 
-- Early termination of accommodation agreements
+Differences in lifestyle habits such as:
 
-Therefore, there is a need for a structured, modular, and configurable compatibility evaluation system that can assess lifestyle alignment, predict conflict risk, and assist institutions or co-living providers in making informed roommate allocations.
+- Sleep schedule  
+- Cleanliness standards  
+- Study habits  
+- Noise tolerance  
+- Smoking preferences  
+- Social behavior  
 
+often lead to conflicts between roommates.
 
-✨ Current Solution
+Most existing accommodation platforms focus only on **room availability**, not **lifestyle compatibility**.
 
-At present, individuals searching for shared accommodation primarily rely on:
+This results in:
 
-- Local brokers or agents
+- Frequent roommate conflicts  
+- Reduced productivity  
+- Mental stress  
+- Financial disagreements  
+- Early termination of accommodation agreements  
 
-- Social media groups (WhatsApp, Telegram, Facebook Marketplace)
+Therefore, there is a need for a **structured compatibility evaluation system** that predicts lifestyle alignment before roommates are assigned.
 
+---
+
+# Current Solution
+
+Currently, people find roommates using:
+
+- Local brokers
+- Social media groups
 - Word-of-mouth referrals
+- Random hostel allocation
+- Rental listing platforms
 
-- Random allocation by hostel or PG management
-
-- Rental listing platforms that focus only on property availability
-
-While these approaches help users find available rooms, they do not evaluate interpersonal compatibility between roommates.
-
-Roommate allocation is typically based on:
+These methods consider only:
 
 - Vacancy availability
-
 - Gender
-
-- Budget similarity
-
+- Budget
 - Basic preferences
 
-There is no structured evaluation of lifestyle alignment such as sleep schedules, cleanliness standards, study habits, social behavior, or conflict sensitivity.
+They **do not evaluate lifestyle compatibility**, which leads to conflicts after roommates start living together.
 
-Even existing digital rental platforms focus primarily on property discovery rather than compatibility modeling. They do not provide:
+---
 
-- Configurable compatibility scoring
+# Project Goals and Milestones
 
-- Conflict risk prediction
+## General Goals
 
-- Structured preference comparison
+- Build a **modular open-source compatibility engine**
+- Implement **configurable compatibility scoring**
+- Predict **conflict risk before roommate allocation**
+- Provide **smart roommate recommendations**
+- Generate **digital roommate agreements**
+- Provide **visual analytics of lifestyle compatibility**
 
-- Pre-roommate agreement mechanisms
+## Milestones
 
-As a result, compatibility assessment is informal, subjective, and reactive — often addressed only after conflicts arise.
+### Phase 1 – Core Architecture
+- Requirement analysis
+- Database schema design
+- Backend API structure
+- User preference models
 
-This highlights the absence of a modular, open-source compatibility framework designed specifically for shared living environments.
+### Phase 2 – Compatibility Engine
+- Weighted compatibility scoring
+- JSON-based weight configuration
+- Conflict risk classification
 
+### Phase 3 – Integration Layer
+- Roommate agreement generator
+- Frontend match visualization
+- Radar chart compatibility analytics
 
-✨ Project Goals and Milestones
+### Phase 4 – Open Source Readiness
+- Code modularization
+- Documentation
+- API documentation
+- Testing and deployment
 
-🎯 General Goals
+---
 
-• To design and implement a modular, open-source lifestyle compatibility engine for structured roommate allocation.
+# Project Approach
 
-• To develop a configurable compatibility scoring framework that allows adjustable weight parameters.
-
-• To introduce a conflict risk prediction layer based on rule-based compatibility analysis.
-
-• To design a clean and scalable API architecture for integration with hostels, universities, or co-living platforms.
-
-• To provide a digital roommate agreement generation system for structured shared-living commitments.
-
-• To ensure clean documentation, modular codebase, and contribution-friendly open-source structure.
-
-• To provide intelligent roommate recommendations based on compatibility scores.
-
-• To offer visual analytics such as radar charts for lifestyle comparison.
-
-📌 Milestones
-
-Phase 1 – Core Architecture
-
-• Requirement analysis and compatibility parameter definition
-• ER diagram and database schema design
-• Backend server setup and API structure
-• User and accommodation data models
-
-Phase 2 – Compatibility Engine
-
-• Implementation of weighted compatibility scoring
-• Development of configurable scoring model (JSON-based weights)
-• Match explanation logic
-• Conflict risk classification system
-
-Phase 3 – Practical Integration Layer
-
-• Digital roommate agreement generator
-• Agreement storage and retrieval
-• Frontend integration with match results
-• Visual compatibility analytics (Radar chart / risk indicators)
-
-Phase 4 – Refinement & Open Source Readiness
-
-• Code refactoring and modularization
-• API documentation
-• Contribution guide and setup instructions
-• Testing and performance validation
-• Final demonstration and deployment
-
-
-✨ Project Approach
-
-1️⃣ Requirement & Parameter Analysis
-
-Identify measurable lifestyle attributes such as:
+### 1. Requirement Analysis
+Identify measurable lifestyle parameters:
 
 - Sleep schedule
-
-- Cleanliness level
-
+- Cleanliness
 - Smoking preference
-
 - Study habits
-
 - Noise tolerance
+- Personality traits
 
-- Personality type
+---
 
-Define scoring weight structure and compatibility logic.
+### 2. Modular Architecture
 
-2️⃣ Modular Database & Architecture Design
+System designed with:
 
-• ER diagram creation
-• Schema design for Users, Preferences, Accommodations, Agreements
-• Clear separation of models, routes, and controllers
-• Scalable backend architecture using Node.js + Express
-• MongoDB for structured preference storage
+- Node.js backend
+- MongoDB database
+- Modular folder structure
+- Scalable API design
 
-Focus: Clean, reusable, modular design.
+---
 
-3️⃣ Compatibility Engine Implementation
+### 3. Compatibility Engine
 
-• Weighted scoring mechanism
-• Configurable weight configuration file
-• Score normalization (0–100%)
-• Rule-based conflict risk triggers
-• Transparent match explanation output
+Features include:
 
-This layer functions independently and can be reused as a framework.
+- Weighted scoring algorithm
+- Configurable weight parameters
+- Compatibility score normalization
+- Transparent match explanations
 
-4️⃣ Conflict Prediction Layer
+---
 
-• Classification into Low / Moderate / High Risk
-• Rule-based mismatch detection
-• Lifestyle gap threshold logic
-• Explanation of risk factors
+### 4. Conflict Prediction
 
-5️⃣ Agreement & Visualization Layer
+Roommates classified as:
 
-• Generate digital roommate agreement
-• Customizable shared-living rules
-• PDF export option
-• Radar chart comparison of lifestyle factors
-• Visual conflict indicator
+- Low Risk
+- Moderate Risk
+- High Risk
 
-6️⃣ Open Source & Documentation Strategy
+Based on rule-based mismatch detection.
 
-• MIT license compliance
-• Clean repository structure
-• README with architecture explanation
-• API documentation
-• Contribution guide
-• Modular folder organization
+---
 
+### 5. Visualization and Agreements
 
-✨ System Features
+- Radar chart comparison of lifestyle parameters
+- Digital roommate agreement generation
+- Shared living rule documentation
 
-The StayMatch platform provides several features designed to improve compatibility-based roommate allocation and reduce shared-living conflicts.
+---
 
-1. Lifestyle Compatibility Matching – Evaluates compatibility between users based on lifestyle preferences such as sleep schedule, cleanliness, study habits, and noise tolerance.
+# System Features
 
-2. Configurable Compatibility Engine – Uses a JSON-based configuration system that allows administrators to modify scoring weights without altering the core algorithm.
+StayMatch provides several features to improve compatibility-based roommate allocation.
 
-3. Conflict Risk Prediction – Identifies potential conflicts between roommates using rule-based mismatch detection.
+1. Lifestyle Compatibility Matching  
+2. Configurable Compatibility Engine  
+3. Conflict Risk Prediction  
+4. Match Explanation System  
+5. Digital Roommate Agreement Generator  
+6. Compatibility Visualization (Radar Charts)  
+7. Guest Mode Access  
+8. Smart Match Recommendation System  
+9. Lifestyle Comparison Dashboard  
+10. Compatibility Feedback System  
 
-4. Match Explanation System – Provides transparent explanations showing why two users are considered compatible or incompatible.
+---
 
-5. Digital Roommate Agreement Generator – Generates structured agreements that define shared living rules and expectations.
+# Technology Stack
 
-6. Compatibility Visualization – Displays compatibility comparisons using radar charts and visual analytics.
+## Frontend
 
-7. Guest Mode Access – Allows users to explore the platform without creating an account.
+- HTML5
+- CSS3
+- JavaScript (ES6)
+- React.js
+- Chart.js
 
-8. Smart Match Recommendation System – Ranks potential roommates based on compatibility scores and suggests the most suitable matches.
+## Backend
 
-9. Lifestyle Compatibility Radar Chart – Provides graphical comparison of lifestyle parameters between users.
+- Node.js
+- Express.js
 
-10. Compatibility Feedback System – Allows users to provide feedback on the accuracy of compatibility predictions to improve future recommendations.
+## Database
 
+- MongoDB
+- Mongoose
 
-✨ Project Outcomes
+## Authentication
 
-• A fully functional Open-Source Lifestyle Compatibility Engine.
+- JSON Web Tokens (JWT)
+- bcrypt.js
 
-• A configurable roommate matching system that institutions can adapt by modifying weight configurations.
+## Agreement Generation
 
-• Transparent compatibility scoring with detailed match explanations.
+- PDFKit
+- HTML-PDF
 
-• Conflict risk prediction before room allocation.
+## Deployment
 
-• Digital roommate agreement generation to formalize shared living expectations.
+- MongoDB Atlas
+- Render / Railway
+- Vercel / Netlify
 
-• Visual compatibility analytics using radar charts for lifestyle comparison.
+## Development Tools
 
-• Smart recommendation of potential roommates based on compatibility ranking.
+- Visual Studio Code
+- Git & GitHub
+- Postman
 
-• Feedback mechanism to improve the compatibility evaluation process.
+---
 
-• Clean modular backend architecture suitable for further extension.
+# Backend Architecture
 
-• Contribution-ready open-source repository with proper documentation.
-
-• A deployable and scalable framework for universities and co-living platforms.
-
-
-✨ Assumptions
-
-• Users provide reasonably accurate preference information.
-
-• Lifestyle parameters are measurable and comparable.
-
-• Institutions may customize weight configuration as per policy.
-
-• The system initially handles a moderate user base.
-
-• Risk classification is rule-based in the current version (no ML dependency).
-
-
-✨ References
-
-• Elmasri & Navathe – Fundamentals of Database Systems
-
-• Korth & Silberschatz – Database System Concepts
-
-• MongoDB Official Documentation
-
-• Node.js Documentation
-
-• Express.js Guide
-
-• React Official Documentation
-
-• Research literature on social compatibility modeling and roommate matching frameworks
-
-
-✨ Technology Stack
-
-The StayMatch system is implemented using a modern full-stack web development architecture that supports scalability, modularity, and open-source extensibility.
-
-1. Frontend Technologies
-
-The frontend of the system is responsible for providing an interactive interface where users can enter their lifestyle preferences, view compatibility matches, and analyze compatibility metrics.
-
-HTML5 – Used for structuring the web pages and forms for user data input.
-
-CSS3 – Used for styling and designing responsive user interfaces.
-
-JavaScript (ES6) – Enables dynamic interaction between the user interface and backend APIs.
-
-React.js – A component-based JavaScript library used to build dynamic and scalable user interfaces.
-
-Chart.js – Used to visualize compatibility comparisons through radar charts and analytical dashboards.
-
-2. Backend Technologies
-
-The backend handles business logic, compatibility scoring, conflict prediction, API management, and agreement generation.
-
-Node.js – Provides a runtime environment for executing server-side JavaScript.
-
-Express.js – A lightweight web framework used to build RESTful APIs and manage server routing.
-
-3. Database
-
-The system stores user preferences, accommodation data, compatibility scores, and roommate agreements.
-
-MongoDB – A NoSQL document-oriented database used for flexible and scalable data storage.
-
-Mongoose – An Object Data Modeling (ODM) library used to manage MongoDB schemas and database interactions.
-
-4. Compatibility Engine
-
-The core innovation of the system is implemented through a configurable compatibility evaluation framework.
-
-JavaScript-based compatibility scoring algorithm
-
-JSON-based weight configuration system that allows institutions to adjust the importance of lifestyle parameters without modifying the core code.
-
-5. Authentication and Security
-
-User authentication and secure access to system APIs are handled using:
-
-JSON Web Tokens (JWT) – For secure authentication and session management.
-
-bcrypt.js – For password hashing and secure credential storage.
-
-6. Agreement Generation
-
-To formalize shared living rules between matched roommates:
-
-PDFKit / HTML-PDF – Used to dynamically generate digital roommate agreements in PDF format.
-
-7. Deployment and Hosting
-
-The system can be deployed using cloud-based platforms for scalability and accessibility.
-
-MongoDB Atlas – Cloud-hosted database service.
-
-Render / Railway – Backend server hosting.
-
-Vercel / Netlify – Frontend deployment.
-
-8. Development Tools
-
-The following tools are used during development and collaboration:
-
-Visual Studio Code – Primary development environment.
-
-Git & GitHub – Version control and open-source collaboration.
-
-Postman – API testing and debugging.
-
-
-🔬 Technical Innovation
-
-StayMatch introduces a configurable compatibility engine where scoring weights can be dynamically adjusted without modifying core logic. The system separates compatibility evaluation from application logic, enabling reuse as a standalone framework. Additionally, the system incorporates rule-based conflict risk modeling, visual compatibility analytics using radar charts, and a recommendation system that ranks potential roommate matches based on lifestyle similarity.
-
-
-## Backend Architecture
-
-The backend of StayMatch follows a modular **Node.js + Express** architecture to ensure scalability, maintainability, and clear separation of concerns.
+The backend follows a modular architecture.
 
 backend/
 
-├── models        → Database schemas (User preferences, accommodation data)
+├── models
+├── controllers
+├── routes
+├── config
+└── server.js
 
-├── controllers   → Business logic for handling compatibility evaluation and API responses
 
-├── routes        → API endpoints for user interaction and data operations
+- **Models** – Database schema definitions  
+- **Controllers** – Business logic  
+- **Routes** – API endpoints  
+- **Config** – Database configuration  
+- **server.js** – Main application entry point  
 
-├── config        → Configuration files such as database connection setup
+---
 
-└── server.js     → Application entry point that initializes the Express server
-
-## Repository Structure
-
-StayMatch is organized with a clean separation between backend services and frontend interface.
+# Repository Structure
 
 FossHack/
 
 ├── backend
-
-    ├── models
-
-        └── User.js
-
-    ├── controllers
-
-    ├── routes
-
-    ├── config
-
-    └── server.js
-
+│ ├── models
+│ ├── controllers
+│ ├── routes
+│ ├── config
+│ └── server.js
+│
 ├── index.html
-
 ├── script.js
-
 ├── style.css
-
 ├── README.md
-
 └── LICENSE
 
-## Future Improvements
 
-• Machine learning based compatibility prediction  
-• Mobile application for roommate matching  
-• Real-time chat between potential roommates  
-• Smart conflict prediction using behavioral patterns  
-• Integration with university housing systems  
+---
 
+# Project Outcomes
 
+- Open-source compatibility engine
+- Configurable roommate matching system
+- Conflict risk prediction
+- Transparent compatibility scoring
+- Digital roommate agreements
+- Visual compatibility analytics
+- Smart roommate recommendation system
+- Modular and scalable architecture
 
-## 🚧 Development Progress
+---
+
+# Future Improvements
+
+- Machine learning based compatibility prediction
+- Mobile application
+- Real-time roommate chat
+- Behavioral conflict prediction
+- Integration with university housing systems
+
+---
+
+# Assumptions
+
+- Users provide accurate preference information
+- Lifestyle parameters are measurable
+- Institutions may modify compatibility weights
+- Initial deployment handles moderate user traffic
+
+---
+
+# References
+
+- Elmasri & Navathe – Fundamentals of Database Systems
+- Korth & Silberschatz – Database System Concepts
+- MongoDB Documentation
+- Node.js Documentation
+- Express.js Guide
+- React Documentation
+
+---
+
+# Development Progress
 
 ### 1 March 2026
-- Hackathon project initialized
-- GitHub repository created and shared with team members
-- Initial README documentation added
-- MIT License added to the repository
+- Project initialized
+- GitHub repository created
+- MIT License added
 
 ### 2 March 2026
-- Basic project structure created
-- Frontend base files added (`index.html`, `script.js`, `style.css`)
-- Repository organization improved
+- Frontend base files created
+- Repository structure organized
 
 ### 3 March 2026
 - Backend folder created
-- Node.js backend initialization started
-- Basic server setup for backend
+- Node.js initialization started
 
 ### 4 March 2026
-- Express server configuration completed
-- Backend project structure organized
+- Express server configured
+- Backend architecture structured
 
 ### 5 March 2026
-- Utility folder created for reusable logic
-- Compatibility engine logic implemented in `utils`
+- Compatibility engine implemented
 
 ### 6 March 2026
-- Sample preference data added for testing compatibility scoring
-- Initial testing of compatibility calculation
+- Sample data added for testing
 
 ### 7 March 2026
-- Minor fixes and repository updates
-- Documentation improvements and progress updates
+- Minor fixes and documentation improvements
+- 
