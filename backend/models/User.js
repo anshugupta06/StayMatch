@@ -1,18 +1,24 @@
 const mongoose = require("mongoose");
 
-const UserSchema = new mongoose.Schema({
-  name: { type: String, required: true },
-  email: { type: String, required: true, unique: true },
-  sleepTime: { type: Number, required: true },
-  wakeTime: { type: Number, required: true },
-  cleanlinessLevel: { type: Number, min: 1, max: 5 },
-  smoking: { type: Boolean, default: false },
-  studyHours: { type: Number },
-  noiseTolerance: { type: Number, min: 1, max: 5 },
-  personalityType: {
-    type: String,
-    enum: ["Introvert", "Extrovert", "Ambivert"]
-  }
-}, { timestamps: true });
+const userSchema = new mongoose.Schema({
 
-module.exports = mongoose.model("User", UserSchema);
+name:{type:String,required:true},
+
+email:{type:String,required:true,unique:true},
+
+password:{type:String,required:true},
+
+preferences:{
+sleep:{type:Number,default:5},
+clean:{type:Number,default:5},
+noise:{type:Number,default:5},
+study:{type:Number,default:5},
+social:{type:Number,default:5},
+smoking:{type:Number,default:0}
+},
+
+createdAt:{type:Date,default:Date.now}
+
+});
+
+module.exports = mongoose.model("User",userSchema);
