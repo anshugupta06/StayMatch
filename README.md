@@ -1,16 +1,33 @@
 # StayMatch – Lifestyle Compatibility Engine for Shared Living
 
-# StayMatch – Lifestyle Compatibility Engine
-
 ## 🎥 Demo Video
 [![Watch Demo](https://img.youtube.com/vi/HAQ2HPi6gWs/0.jpg)](https://youtu.be/HAQ2HPi6gWs)
 
 ## 📸 Screenshots
-...
+
+![Login_Page](images/Login_Page.png)
+
+![Dashboard](images/Dashboard.png)
+
+![Compatibility_Check](images/Compatibility_Check.png)
+
+![Conflict_Check](images/Conflict_Check.png)
+
+![Smart_Chores](images/Task_Chores.png)
+
+![Agreement](images/Agreement.png)
 
 StayMatch is an **open-source lifestyle compatibility engine** designed to help students and working professionals find compatible roommates before sharing accommodation.
 
 The system evaluates lifestyle preferences and predicts **compatibility scores and potential conflict risks**, enabling smarter roommate matching.
+
+## 🚀 Key Features
+
+- 🧠 Lifestyle Compatibility Matching  
+- ⚠️ Conflict Risk Prediction  
+- 🧹 Smart Chore Allocation  
+- 📄 Auto Roommate Agreement Generator  
+- 📊 Interactive Dashboard & Analytics  
 
 ---
 
@@ -426,19 +443,5 @@ StayMatch/
 - React Documentation
 
 ---
-
-## Screenshots
-
-![Login_Page](Login_Page.png)
-
-![Dashboard](Dashboard.png)
-
-![Compatibility_Check](Compatibility_Check.png)
-
-![Conflict_Check](Conflict_Check.png)
-
-![Smart_Chores](Task_Chores.png)
-
-![Agreement](Agreement.png)
 
 
